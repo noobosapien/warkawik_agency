@@ -13,7 +13,7 @@ export default function Layout({ children }) {
 
   return (
     <div className={`${state?.darkMode?.dark ? "dark" : ""} `}>
-      <div className="dark:bg-slate-900 dark:text-slate-200 min-h-screen">
+      <div className="dark:bg-slate-900 text-slate-600 dark:text-slate-200 min-h-screen">
         <nav className="relative container mx-auto p-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-20">
@@ -94,7 +94,7 @@ export default function Layout({ children }) {
           <div
             className={`absolute ${
               menuOpen ? "flex" : "hidden"
-            } lg:hidden p-6 rounded-lg bg-cyan-600 left-6 right-6 top-20 z-100`}
+            } lg:hidden p-6 rounded-lg bg-cyan-600 left-6 right-6 top-20 z-10`}
           >
             <div className="flex flex-col items-center justify-center w-full space-y-6 font-bold text-slate-200 rounded-sm">
               <a href="#" className="w-full text-center">

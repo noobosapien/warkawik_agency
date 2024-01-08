@@ -5,19 +5,19 @@ const cards = [
   {
     heading: "Web Design / Web Development",
     content:
-      "Warkawik is a customer-centric digital agency, where your vision is our top priority. We are committed to delivering a seamless and personalized experience, guided by industry best practices that ensure your satisfaction at every step of the journey.",
+      "Warkawik is a customer-centric digital agency, where your vision is our top priority. We cater to your imagination and will not limit it in any way.",
     num: 1,
   },
   {
     heading: "Brand Identity Creation",
     content:
-      "Our experienced team collaborates closely with you to understand your vision, values, and aspirations, crafting a brand identity that resonates with authenticity and purpose. We pride ourselves on transparent communication, strategic thinking, and a relentless pursuit of perfection to bring your brand to life.",
+      "We collaborate closely with you to understand your vision, values, and aspirations, crafting a brand identity that resonates with authenticity and purpose.",
     num: 2,
   },
   {
-    heading: "Cloud to Cloud Migration",
+    heading: "Cloud Infrastructure / Cloud Migration",
     content:
-      "We understand that navigating the complexities of cloud migration can be a daunting task, and that's where our dedicated team steps in with confidence and expertise. Our commitment goes beyond seamless migration – we prioritize your unique business needs, ensuring a customized and stress-free transition to the cloud.",
+      "We understand that navigating the complexities of the cloud can be a daunting task, therefore we step in with confidence and expertise for a seamless service accustomed to your unique business needs.",
     num: 3,
   },
 ];
@@ -27,7 +27,7 @@ export default function Difference() {
     <>
       <div id="difference" className="dark:bg-slate-700 bg-slate-200"></div>
       <section className="dark:bg-slate-700 bg-slate-200 min-h-48">
-        <div className="container flex flex-col mx-auto p-16 lg:pt-32 justify-center items-center">
+        <div className="container flex flex-col mx-auto  lg:pt-32 justify-center items-center">
           <div className="flex flex-col lg:w-1/2 space-y-4 items-center">
             <h1 className="text-4xl font-bold text-center">We excel in</h1>
 
@@ -43,10 +43,23 @@ export default function Difference() {
             {/* <div className="absolute w-2 left-1/2 h-full -ml-1 bg-cyan md:hidden"></div> */}
 
             {cards.map((card) => (
-              <ServiceCard heading={card.heading} Num={card.num}>
+              <ServiceCard
+                key={card.num + "service_cards"}
+                heading={card.heading}
+                Num={card.num}
+              >
                 {card.content}
               </ServiceCard>
             ))}
+          </div>
+
+          <div className="flex flex-col lg:w-1/2 space-y-4 items-center pt-12">
+            <a
+              href="#"
+              className="max-w-xs mx-auto text-center p-2 rounded-2xl border-4 border-cyan-600/50"
+            >
+              View all our services
+            </a>
           </div>
         </div>
       </section>

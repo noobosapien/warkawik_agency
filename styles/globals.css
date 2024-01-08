@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("./TechCarousel.css");
+
 .ficon:hover{
     filter: invert(80%) sepia(61%) saturate(464%) hue-rotate(130deg) brightness(90%) contrast(85%);
 }
@@ -71,5 +73,5 @@
 }
 
 .card{
-    /* height: 800px; */
+    /* height: 24rem; */
 }

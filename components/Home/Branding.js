@@ -27,8 +27,8 @@ export default class Branding extends React.Component {
       <div>
         <Lottie
           options={defaultOptions}
-          height={300}
-          width={300}
+          height={200}
+          width={200}
           isStopped={this.state.isStopped}
           isPaused={this.state.isPaused}
         />

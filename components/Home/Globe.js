@@ -1,8 +1,8 @@
 import React from "react";
 import Lottie from "react-lottie";
-import * as animationData from "@/public/webdev.json";
+import * as animationData from "@/public/globe.json";
 
-export default class WebDev extends React.Component {
+export default class Dev extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isStopped: false, isPaused: false };
@@ -27,8 +27,8 @@ export default class WebDev extends React.Component {
       <div>
         <Lottie
           options={defaultOptions}
-          height={200}
-          width={200}
+          height="full"
+          width="full"
           isStopped={this.state.isStopped}
           isPaused={this.state.isPaused}
         />

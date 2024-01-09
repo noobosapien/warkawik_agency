@@ -8,29 +8,106 @@ import ReactSVG from "@/public/react.svg";
 import RustSVG from "@/public/rust.svg";
 import WebglSVG from "@/public/webgl.svg";
 import WASVG from "@/public/wa.svg";
+import AISVG from "@/public/ai.svg";
+import WebsiteSVG from "@/public/website.svg";
+import CloudSVG from "@/public/cloud.svg";
 
 export default function TechCarousel() {
   return (
     <>
-      <div className="flex flex-col items-center gap-10 bg-slate-300 dark:bg-slate-600 p-6 rounded-2xl">
-        <div
-          id="tech_carousel"
-          className=" relative flex flex-row flex-wrap items-center justify-evenly gap-10"
-        >
-          <img id="openai" className="w-16" src={OpenAISVG.src} />
-          <img id="azure" className="w-16" src={AzureSVG.src} />
-          <img id="aws" className="w-16" src={AWSSVG.src} />
-          <img id="kubernetes" className="w-16" src={KubernetesSVG.src} />
-          <img id="react" className="w-16" src={ReactSVG.src} />
-          <img id="rust" className="w-16" src={RustSVG.src} />
-          <img id="webgl" className="w-16" src={WebglSVG.src} />
-          <img id="wa" className="w-16" src={WASVG.src} />
-        </div>
+      <section className="pb-32">
+        <div className="relative container flex flex-col items-start px-6 mx-auto lg:flex-row lg:space-x-7">
+          <div className="hidden absolute top-24 w-10/12 left-16 h-3 bg-cyan-600 lg:block"></div>
+          <div className="absolute w-2 left-1/2 h-full -ml-1 bg-cyan-600 lg:hidden"></div>
 
-        <p className="text-center md:text-left">
-          Some of the technologies we use
-        </p>
-      </div>
+          <div className="relative flex flex-col p-6 space-y-6 rounded-lg lg:w-1/3 bg-slate-300 dark:bg-slate-600">
+            <div className="absolute -ml-10 left-1/2 -top-10 lg:left-16">
+              <div className="flex items-center justify-center w-20 h-20 p-4 rounded-full bg-slate-100 dark:bg-slate-900">
+                <img src={AISVG.src} alt="" />
+              </div>
+            </div>
+
+            <h5 className="pt-6 text-xl font-bold text-center capitalize lg:text-left">
+              Artificial Intelligence
+            </h5>
+
+            <p className="text-center lg:text-left">
+              Boost your brand recognition with each click. Generic links don't
+              mean a thing. Branded links help instil confidence in your
+              content.
+            </p>
+
+            <div className="flex flex-row gap-4 items-center self-center">
+              <div className="flex items-center justify-center w-10 h-10 p-2 rounded-full bg-slate-600 dark:bg-slate-100">
+                <img src={OpenAISVG.src} alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div className="relative mt-24 lg:mt-8 flex flex-col p-6 space-y-6 bg-slate-300 dark:bg-slate-600 rounded-lg lg:w-1/3">
+            <div className="absolute -ml-10 left-1/2 -top-10 lg:left-16">
+              <div className="flex items-center justify-center w-20 h-20 p-4 rounded-full bg-slate-100 dark:bg-slate-900">
+                <img src={WebsiteSVG.src} alt="" />
+              </div>
+            </div>
+
+            <h5 className="pt-6 text-xl font-bold text-center capitalize lg:text-left">
+              Front end
+            </h5>
+
+            <p className="text-center lg:text-left">
+              Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better
+              decisions.
+            </p>
+
+            <div className="flex flex-row gap-4 items-center self-center">
+              <div className="flex items-center justify-center w-10 h-10 p-2 rounded-full bg-slate-600 dark:bg-slate-100">
+                <img src={ReactSVG.src} alt="" />
+              </div>
+
+              <div className="flex items-center justify-center w-10 h-10 p-2 rounded-full bg-slate-600 dark:bg-slate-100">
+                <img src={WebglSVG.src} alt="" />
+              </div>
+
+              <div className="flex items-center justify-center w-10 h-10 p-2 rounded-full bg-slate-600 dark:bg-slate-100">
+                <img src={WASVG.src} alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div className="relative mt-24 lg:mt-16 flex flex-col p-6 space-y-6 bg-slate-300 dark:bg-slate-600 rounded-lg lg:w-1/3">
+            <div className="absolute flex flex-row gap-4 items-center -ml-10 left-1/2 -top-10 lg:left-16">
+              <div className="flex items-center justify-center w-20 h-20 p-4 rounded-full bg-slate-100 dark:bg-slate-900">
+                <img src={CloudSVG.src} alt="" />
+              </div>
+            </div>
+
+            <h5 className="pt-6 text-xl font-bold text-center capitalize lg:text-left">
+              Backend / Cloud hosting
+            </h5>
+
+            <p className="text-center lg:text-left">
+              Improve brand awareness and content discoverability through
+              customizable links, supercharging audience engagement.
+            </p>
+
+            <div className="flex flex-row gap-4 items-center self-center">
+              <div className="flex items-center justify-center w-10 h-10 p-2 rounded-full bg-slate-600 dark:bg-slate-100">
+                <img src={AzureSVG.src} alt="" />
+              </div>
+
+              <div className="flex items-center justify-center w-10 h-10 p-2 rounded-full bg-slate-600 dark:bg-slate-100">
+                <img src={AWSSVG.src} alt="" />
+              </div>
+
+              <div className="flex items-center justify-center w-10 h-10 p-2 rounded-full bg-slate-600 dark:bg-slate-100">
+                <img src={KubernetesSVG.src} alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

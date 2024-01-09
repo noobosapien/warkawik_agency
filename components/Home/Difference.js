@@ -26,22 +26,18 @@ export default function Difference() {
   return (
     <>
       <div id="difference" className="dark:bg-slate-700 bg-slate-200"></div>
-      <section className="dark:bg-slate-700 bg-slate-200 min-h-48">
+      <section className="dark:bg-slate-700 bg-slate-200 min-h-48 p-6">
         <div className="container flex flex-col mx-auto  lg:pt-32 justify-center items-center">
           <div className="flex flex-col lg:w-1/2 space-y-4 items-center">
             <h1 className="text-4xl font-bold text-center">We excel in</h1>
 
-            <p className="max-w-xs mx-auto text-center text-slate-400">
+            <p className="mx-auto text-center text-slate-400">
               We strive for your digital presence. We are savants in these but
               not limited to.
             </p>
           </div>
 
           <div className="relative container flex flex-col items-center px-6 mx-auto lg:flex-row lg:space-x-7">
-            {/* <div className="hidden absolute top-24 w-10/12 left-16 h-3 bg-cyan md:block"></div> */}
-
-            {/* <div className="absolute w-2 left-1/2 h-full -ml-1 bg-cyan md:hidden"></div> */}
-
             {cards.map((card) => (
               <ServiceCard
                 key={card.num + "service_cards"}
@@ -56,7 +52,7 @@ export default function Difference() {
           <div className="flex flex-col lg:w-1/2 space-y-4 items-center pt-12">
             <a
               href="#"
-              className="max-w-xs mx-auto text-center p-2 rounded-2xl border-4 border-cyan-600/50"
+              className="max-w-xs mx-auto text-center py-2 px-6 rounded-2xl border-2 border-cyan-600/50"
             >
               View all our services
             </a>

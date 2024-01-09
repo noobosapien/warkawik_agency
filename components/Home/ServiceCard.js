@@ -31,11 +31,11 @@ export default function ServiceCard({ Num, heading, children }) {
           </div>
         </div>
 
-        <h5 className="pt-6 text-xl font-bold text-center capitalize md:text-left">
+        <h5 className="pt-6 text-xl font-bold text-center capitalize lg:text-left">
           {heading}
         </h5>
 
-        <p className="text-center md:text-left">{children}</p>
+        <p className="text-center lg:text-left">{children}</p>
       </div>
     </>
   );

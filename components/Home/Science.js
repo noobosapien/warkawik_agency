@@ -1,5 +1,6 @@
 import React from "react";
-import ColorWheel from "./ColorWheel";
+import ScienceTable from "./ScienceTable";
+import WGLColorWheel from "./webglColorWheel";
 
 export default function Science() {
   return (
@@ -18,8 +19,9 @@ export default function Science() {
             </p>
           </div>
 
-          <div className="relative container flex flex-col items-center px-6 mx-auto lg:flex-row lg:space-x-7">
-            <ColorWheel />
+          <div className="relative container flex flex-col items-center px-6 mx-auto justify-evenly lg:flex-row lg:space-x-7">
+            <WGLColorWheel />
+            <ScienceTable />
           </div>
         </div>
       </section>

@@ -5,7 +5,6 @@ import WGLColorWheel from "./webglColorWheel";
 export default function Science() {
   return (
     <>
-      <div className="dark:bg-slate-700 bg-slate-200"></div>
       <section className="dark:bg-slate-700 bg-slate-200 min-h-48 p-6">
         <div className="container flex flex-col mx-auto  lg:pt-32 justify-center items-center">
           <div className="flex flex-col lg:w-1/2 space-y-4 items-center">

@@ -10,6 +10,8 @@ export default function ScienceTable() {
   const resNameRef = useRef(null);
   const typNameRef = useRef(null);
 
+  const colorContRef = useRef(null);
+
   const spanAttribs = () => {
     let p = parent.current;
 
@@ -44,14 +46,22 @@ export default function ScienceTable() {
   }, [colorNameRef, resNameRef, typNameRef, parent, active]);
 
   const nameClick = (name) => (e) => {
-    if (name === "color") setActive("color");
-    if (name === "res") setActive("res");
-    if (name === "typ") setActive("typ");
+    if (name === "color") {
+      setActive("color");
+    }
+
+    if (name === "res") {
+      setActive("res");
+    }
+
+    if (name === "typ") {
+      setActive("typ");
+    }
   };
 
   return (
     <>
-      <div className="flex flex-col dark:bg-slate-600 bg-slate-300 rounded">
+      <div className="flex flex-col rounded">
         {/* headings */}
         <div
           ref={parent}
@@ -80,11 +90,33 @@ export default function ScienceTable() {
         </div>
         {/* container */}
 
-        <div className="min-h-64 pt-12 lg:pt-6 p-6 ">
-          <p>
-            We use color theory in our design for the most visually pleasing
-            designs
-          </p>
+        <div className="relative dark:bg-slate-600 bg-slate-300 w-full h-48">
+          <div
+            className={`sci-table-entry ${
+              active === "color" ? "fade" : ""
+            } absolute min-h-64 pt-12 lg:pt-6 p-6`}
+          >
+            <p>
+              We use color theory in our design for the most visually pleasing
+              designs
+            </p>
+          </div>
+
+          <div
+            className={`sci-table-entry ${
+              active === "res" ? "fade" : ""
+            } absolute min-h-64 pt-12 lg:pt-6 p-6`}
+          >
+            <p>Responsive design which is mobile friendly.</p>
+          </div>
+
+          <div
+            className={`sci-table-entry ${
+              active === "typ" ? "fade" : ""
+            } absolute min-h-64 pt-12 lg:pt-6 p-6`}
+          >
+            <p>Consistent Typography and spacing.</p>
+          </div>
         </div>
       </div>
     </>

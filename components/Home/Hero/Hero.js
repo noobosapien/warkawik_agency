@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import React from "react";
 
-const Dev = dynamic(() => import("@/components/Home/Dev"), {
+const Dev = dynamic(() => import("@/components/Home/Hero/Dev"), {
   ssr: false,
 });
 

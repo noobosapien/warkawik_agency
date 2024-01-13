@@ -16,7 +16,7 @@ export default function SiteCard({ left, siteName, tech }) {
         ></div>
 
         <div
-          className="absolute hidden lg:block w-10 h-10 rounded-full bg-cyan-600 z-10 top-1/2"
+          className="absolute hidden lg:block w-10 h-10 rounded-full bg-white dark:bg-slate-900 z-10 top-1/2"
           style={{
             left: left ? "calc(0% - 1.25rem)" : "calc(100% - 1.25rem)",
             top: "calc(50% - 1.25rem)",
@@ -38,7 +38,7 @@ export default function SiteCard({ left, siteName, tech }) {
         ></div>
 
         <div className="relative flex flex-row justify-center w-full h-64 p-6 space-y-6 rounded-lg bg-slate-300 dark:bg-slate-600">
-          <p className="">{siteName}</p>
+          <p className="font-medium">{siteName}</p>
 
           <div
             className={`absolute flex flex-col h-full top-0 ${
@@ -46,15 +46,15 @@ export default function SiteCard({ left, siteName, tech }) {
             } items-center justify-center space-y-4 px-2`}
           >
             {tech instanceof Array &&
-              tech.map((t) => (
+              tech.map((t, i) => (
                 <>
-                  <p key={t + uuidv4()}>{t}</p>
+                  <p key={uuidv4() + i}>{t}</p>
                 </>
               ))}
           </div>
 
-          <div className="absolute animate-ping w-10 h-10 rounded-full bg-cyan-600 z-10 bottom-0"></div>
-          <div className="absolute w-8 h-8 rounded-full bg-cyan-600 z-10 bottom-0"></div>
+          <div className="absolute animate-ping w-10 h-10 rounded-full bg-cyan-600 z-10 bottom-1"></div>
+          <div className="absolute w-8 h-8 rounded-full bg-cyan-600 z-10 bottom-1"></div>
         </div>
       </div>
     </>

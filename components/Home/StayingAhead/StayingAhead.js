@@ -1,10 +1,5 @@
-import dynamic from "next/dynamic";
 import React from "react";
 import TechCarousel from "./TechCarousel";
-
-const Globe = dynamic(() => import("@/components/Home/Globe"), {
-  ssr: false,
-});
 
 export default function StayingAhead() {
   return (

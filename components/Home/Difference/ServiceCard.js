@@ -1,15 +1,18 @@
 import dynamic from "next/dynamic";
 import React from "react";
 
-const WebDev = dynamic(() => import("@/components/Home/WebDev"), {
+const WebDev = dynamic(() => import("@/components/Home/Difference/WebDev"), {
   ssr: false,
 });
 
-const Branding = dynamic(() => import("@/components/Home/Branding"), {
-  ssr: false,
-});
+const Branding = dynamic(
+  () => import("@/components/Home/Difference/Branding"),
+  {
+    ssr: false,
+  }
+);
 
-const Migrate = dynamic(() => import("@/components/Home/Migrate"), {
+const Migrate = dynamic(() => import("@/components/Home/Difference/Migrate"), {
   ssr: false,
 });
 

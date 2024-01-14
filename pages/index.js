@@ -5,6 +5,7 @@ import Difference from "@/components/Home//Difference/Difference";
 import StayingAhead from "@/components/Home/StayingAhead/StayingAhead";
 import Featured from "@/components/Home/Featured/Featured";
 import Science from "@/components/Home/Science/Science";
+import Innovation from "@/components/Home/Innovation/Innovation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function Home() {
         <StayingAhead />
         <Science />
         <Featured />
+        <Innovation />
       </Layout>
     </>
   );

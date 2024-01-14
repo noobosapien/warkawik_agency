@@ -20,7 +20,7 @@ export default function Featured() {
   return (
     <>
       <section className="min-h-48 p-6 pb-32">
-        <div className="container relative flex flex-col mx-auto lg:pt-32 justify-center items-center">
+        <div className="container relative flex flex-col mx-auto pt-32 justify-center items-center">
           <div
             className="absolute z-10 hidden lg:block w-2 left-1/2 h-4/6 bottom-0 -ml-1 bg-cyan-600 rounded-xl "
             style={{
@@ -31,7 +31,7 @@ export default function Featured() {
           <div
             className="absolute lg:hidden block w-2 left-1/2 h-5/6 bottom-0 -ml-1 bg-cyan-600 rounded-xl "
             style={{
-              bottom: "1%",
+              bottom: "0%",
             }}
           ></div>
 

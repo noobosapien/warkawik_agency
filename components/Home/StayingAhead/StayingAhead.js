@@ -5,7 +5,7 @@ export default function StayingAhead() {
   return (
     <>
       <section className="min-h-48 p-6">
-        <div className="container flex flex-col mx-auto pt-32 lg:pt-32 justify-center gap-10 items-center">
+        <div className="container flex flex-col mx-auto pt-32 justify-center gap-10 items-center">
           <div className="flex flex-col lg:w-1/2 space-y-10 items-center">
             <h1 className="text-4xl font-bold text-center">
               Staying ahead of technology

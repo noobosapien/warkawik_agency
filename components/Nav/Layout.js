@@ -12,7 +12,7 @@ export default function Layout({ children }) {
   };
 
   return (
-    <div className={`${state?.darkMode?.dark ? "dark" : ""} `}>
+    <div className={`${state?.darkMode?.dark ? "dark" : ""} scroll-smooth`}>
       <div className="dark:bg-slate-900 text-slate-600 dark:text-slate-200 min-h-screen">
         <nav className="relative container mx-auto p-6">
           <div className="flex items-center justify-between">
@@ -128,7 +128,57 @@ export default function Layout({ children }) {
 
         {children}
 
-        <footer></footer>
+        <footer className="min-h-48 ">
+          <div className="relative flex flex-col dark:bg-slate-700 bg-slate-200">
+            <div className="flex flex-row items-center justify-evenly space-x-7 p-6">
+              <div className="flex flex-col">
+                <p>Feel free to ask us a question</p>
+                <p>hi@warkawik.co.nz</p>
+              </div>
+
+              <div className="flex flex-col items-center justify-evenly">
+                <p className="text-center">Let's keep in touch</p>
+                <input className="w-2/3 rounded" />
+
+                <div className="flex flex-row items-center justify-evenly space-x-7">
+                  <a href="#">FB</a>
+                  <a href="#">X</a>
+                  <a href="#">LI</a>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-row items-center justify-center space-x-4 p-6">
+              <a href="#">Home</a>
+              <a href="#">Services</a>
+              <a href="#">Process</a>
+              <a href="#">Portfolio</a>
+              <a href="#">Blog</a>
+            </div>
+            <div className="flex flex-row items-center justify-center space-x-4 p-6">
+              <a href="#">About</a>
+              <a href="#">Contact</a>
+              <a href="#">Privacy</a>
+              <a href="#">Terms</a>
+            </div>
+
+            <div className="flex flex-col items-center justify-center space-y-4 p-6">
+              <p>Cryptocurrencies we accept:</p>
+
+              <div className="flex flex-row items-center justify-center space-x-4">
+                <div>B</div>
+                <div>E</div>
+                <div>S</div>
+              </div>
+            </div>
+
+            <div className="dark:bg-slate-600 bg-slate-300 flex flex-col items-center justify-center min-h-24">
+              <p className="text-center">
+                Let us make your web dream become a reality.
+              </p>
+              <p>Warkawik | All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );

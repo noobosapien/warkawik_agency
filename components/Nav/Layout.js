@@ -7,7 +7,7 @@ import FB from "@/public/fb.svg";
 import X from "@/public/x.svg";
 import LI from "@/public/li.svg";
 
-export default function Layout({ children }) {
+export default function Layout({ active, children }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const { state, dispatch } = useContext(Theme);
@@ -57,42 +57,54 @@ export default function Layout({ children }) {
                 <div className="hidden lg:flex space-x-8 font-bold items-center">
                   <Link
                     href="/services"
-                    className="text-slate-600 dark:text-slate-200 hover:text-veryDarkViolet"
+                    className={`text-slate-600 dark:text-slate-200 hover:text-cyan-600 rounded ${
+                      active == "services" ? "border-cyan-600 border-b-4" : ""
+                    }`}
                   >
                     Services
                   </Link>
 
                   <Link
                     href="/process"
-                    className="text-slate-600 dark:text-slate-200 hover:text-veryDarkViolet"
+                    className={`text-slate-600 dark:text-slate-200 hover:text-cyan-600 rounded ${
+                      active == "process" ? "border-cyan-600 border-b-4" : ""
+                    }`}
                   >
                     Process
                   </Link>
 
                   <Link
                     href="/portfolio"
-                    className="text-slate-600 dark:text-slate-200 hover:text-veryDarkViolet"
+                    className={`text-slate-600 dark:text-slate-200 hover:text-cyan-600 rounded ${
+                      active == "portfolio" ? "border-cyan-600 border-b-4" : ""
+                    }`}
                   >
                     Portfolio
                   </Link>
 
                   <Link
                     href="/blog"
-                    className="text-slate-600 dark:text-slate-200 hover:text-veryDarkViolet"
+                    className={`text-slate-600 dark:text-slate-200 hover:text-cyan-600 rounded ${
+                      active == "blog" ? "border-cyan-600 border-b-4" : ""
+                    }`}
                   >
                     Blog
                   </Link>
 
                   <Link
                     href="/about"
-                    className="text-slate-600 dark:text-slate-200 hover:text-veryDarkViolet"
+                    className={`text-slate-600 dark:text-slate-200 hover:text-cyan-600 rounded ${
+                      active == "about" ? "border-cyan-600 border-b-4" : ""
+                    }`}
                   >
                     About us
                   </Link>
 
                   <Link
                     href="/contact"
-                    className="px-8 py-3 font-bold text-slate-200 bg-cyan-600 rounded-full hover:opacity-70"
+                    className={`text-slate-600 dark:text-slate-200 hover:text-cyan-600 rounded ${
+                      active == "contact" ? "border-cyan-600 border-b-4" : ""
+                    }`}
                   >
                     Contact
                   </Link>
@@ -121,27 +133,51 @@ export default function Layout({ children }) {
               } lg:hidden p-6 rounded-lg bg-cyan-600 left-6 right-6 top-20 z-10`}
             >
               <div className="flex flex-col items-center justify-center w-full space-y-6 font-bold text-slate-200 rounded-sm">
-                <Link href="/services" className="w-full text-center">
+                <Link
+                  href="/services"
+                  className={`w-full text-center ${
+                    active == "services" ? "text-slate-600" : ""
+                  }`}
+                >
                   Services
                 </Link>
-                <Link href="/process" className="w-full text-center">
+                <Link
+                  href="/process"
+                  className={`w-full text-center ${
+                    active == "process" ? "text-slate-600" : ""
+                  }`}
+                >
                   Process
                 </Link>
-                <Link href="/portfolio" className="w-full text-center">
+                <Link
+                  href="/portfolio"
+                  className={`w-full text-center ${
+                    active == "portfolio" ? "text-slate-600" : ""
+                  }`}
+                >
                   Portfolio
                 </Link>
-                <Link href="/blog" className="w-full text-center">
+                <Link
+                  href="/blog"
+                  className={`w-full text-center ${
+                    active == "blog" ? "text-slate-600" : ""
+                  }`}
+                >
                   Blog
                 </Link>
                 <Link
                   href="/about"
-                  className="w-full pt-6 border-t border-gray-400 text-center"
+                  className={`w-full pt-6 border-t border-slate-400 text-center ${
+                    active == "about" ? "text-slate-600" : ""
+                  }`}
                 >
                   About us
                 </Link>
                 <Link
                   href="/contact"
-                  className="w-full py-3 rounded-full bg-cyan text-center"
+                  className={`w-full py-3 rounded-full bg-cyan text-center ${
+                    active == "contact" ? "text-slate-600" : ""
+                  }`}
                 >
                   Contact
                 </Link>
@@ -203,17 +239,95 @@ export default function Layout({ children }) {
                 </div>
               </div>
               <div className="flex flex-row flex-wrap items-center justify-center space-x-4 p-2 text-slate-600 dark:text-slate-400 font-normal">
-                <Link href="/">Home</Link>
-                <Link href="/services">Services</Link>
-                <Link href="/process">Process</Link>
-                <Link href="/portfolio">Portfolio</Link>
-                <Link href="/blog">Blog</Link>
+                <Link
+                  href="/"
+                  className={`${
+                    active == "home" ? "text-slate-900 dark:text-slate-100" : ""
+                  }`}
+                >
+                  Home
+                </Link>
+
+                <Link
+                  href="/services"
+                  className={`${
+                    active == "services"
+                      ? "text-slate-900 dark:text-slate-100"
+                      : ""
+                  }`}
+                >
+                  Services
+                </Link>
+                <Link
+                  href="/process"
+                  className={`${
+                    active == "process"
+                      ? "text-slate-900 dark:text-slate-100"
+                      : ""
+                  }`}
+                >
+                  Process
+                </Link>
+                <Link
+                  href="/portfolio"
+                  className={`${
+                    active == "portfolio"
+                      ? "text-slate-900 dark:text-slate-100"
+                      : ""
+                  }`}
+                >
+                  Portfolio
+                </Link>
+                <Link
+                  href="/blog"
+                  className={`${
+                    active == "blog" ? "text-slate-900 dark:text-slate-100" : ""
+                  }`}
+                >
+                  Blog
+                </Link>
               </div>
               <div className="flex flex-row items-center justify-center space-x-4 p-6 text-slate-600 dark:text-slate-400 font-normal">
-                <Link href="/about">About</Link>
-                <Link href="/contact">Contact</Link>
-                <Link href="/privacy">Privacy</Link>
-                <Link href="/terms">Terms</Link>
+                <Link
+                  href="/about"
+                  className={`${
+                    active == "about"
+                      ? "text-slate-900 dark:text-slate-100"
+                      : ""
+                  }`}
+                >
+                  About
+                </Link>
+                <Link
+                  href="/contact"
+                  className={`${
+                    active == "contact"
+                      ? "text-slate-900 dark:text-slate-100"
+                      : ""
+                  }`}
+                >
+                  Contact
+                </Link>
+                <Link
+                  href="/privacy"
+                  className={`${
+                    active == "privacy"
+                      ? "text-slate-900 dark:text-slate-100"
+                      : ""
+                  }`}
+                >
+                  Privacy
+                </Link>
+                <Link
+                  href="/terms"
+                  className={`${
+                    active == "terms"
+                      ? "text-slate-900 dark:text-slate-100"
+                      : ""
+                  }`}
+                >
+                  Terms
+                </Link>
               </div>
 
               <div className="dark:bg-slate-600 bg-slate-300 flex flex-col items-center justify-center min-h-24 text-slate-400">

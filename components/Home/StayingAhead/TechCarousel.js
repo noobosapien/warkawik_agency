@@ -5,7 +5,7 @@ import AzureSVG from "@/public/azure.svg";
 import AWSSVG from "@/public/aws.svg";
 import KubernetesSVG from "@/public/kubernetes.svg";
 import ReactSVG from "@/public/react.svg";
-import RustSVG from "@/public/rust.svg";
+import MidjourneySVG from "@/public/midjourney.svg";
 import WebglSVG from "@/public/webgl.svg";
 import WASVG from "@/public/wa.svg";
 import AISVG from "@/public/ai.svg";
@@ -32,14 +32,18 @@ export default function TechCarousel() {
             </h5>
 
             <p className="text-center lg:text-left">
-              Boost your brand recognition with each click. Generic links don't
-              mean a thing. Branded links help instil confidence in your
-              content.
+              Utilizing state of the art AI technologies such as ChatGPT, DALL-E
+              2, and Midjourney with our own trained models and configurations
+              for more streamlined content just for you.
             </p>
 
             <div className="flex flex-row gap-4 items-center self-center">
               <div className="flex items-center justify-center w-10 h-10 p-2 rounded-full bg-slate-600 dark:bg-slate-100">
                 <img src={OpenAISVG.src} alt="" />
+              </div>
+
+              <div className="flex items-center justify-center w-10 h-10 p-2 rounded-full bg-slate-600 dark:bg-slate-100">
+                <img src={MidjourneySVG.src} alt="" />
               </div>
             </div>
           </div>
@@ -56,9 +60,8 @@ export default function TechCarousel() {
             </h5>
 
             <p className="text-center lg:text-left">
-              Gain insights into who is clicking your links. Knowing when and
-              where people engage with your content helps inform better
-              decisions.
+              From landing pages to complex UI systems, get yur website come to
+              life with killer content and industry standard designs.
             </p>
 
             <div className="flex flex-row gap-4 items-center self-center">

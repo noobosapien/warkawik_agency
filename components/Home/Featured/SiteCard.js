@@ -1,6 +1,12 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 
+import ReactSVG from "@/public/react.svg";
+import StrapiSVG from "@/public/strapi.svg";
+import MDBSVG from "@/public/mdb.svg";
+import AWSSVG from "@/public/aws.svg";
+import RectSVG from "@/public/rect.svg";
+
 export default function SiteCard({ left, siteName, tech }) {
   return (
     <>
@@ -41,20 +47,34 @@ export default function SiteCard({ left, siteName, tech }) {
           <p className="font-medium">{siteName}</p>
 
           <div
-            className={`absolute flex flex-col h-full top-0 ${
+            className={`absolute flex flex-col h-full w-1/5 top-0 ${
               left ? "right-0" : "left-0"
-            } items-center justify-center space-y-4 px-2`}
+            } items-center justify-center items-center space-y-4 px-2`}
           >
             {tech instanceof Array &&
               tech.map((t, i) => (
                 <>
-                  <p key={uuidv4() + i}>{t}</p>
+                  <div key={uuidv4() + i}>
+                    {t == "react" ? (
+                      <img className="w-7" src={ReactSVG.src} />
+                    ) : t == "mdb" ? (
+                      <img className="w-7" src={MDBSVG.src} />
+                    ) : t == "aws" ? (
+                      <img className="w-7" src={AWSSVG.src} />
+                    ) : t == "strapi" ? (
+                      <img className="w-7" src={StrapiSVG.src} />
+                    ) : (
+                      <></>
+                    )}
+                  </div>
                 </>
               ))}
           </div>
 
           <div className="absolute animate-ping w-10 h-10 rounded-full bg-cyan-600 z-10 bottom-1"></div>
-          <div className="absolute w-8 h-8 rounded-full bg-cyan-600 z-10 bottom-1"></div>
+          <div className="absolute flex items-center justify-center w-10 h-10 rounded-full bg-cyan-600 z-10 bottom-1">
+            <img src={RectSVG.src} alt="Rectangle" className="w-8" />
+          </div>
         </div>
       </div>
     </>

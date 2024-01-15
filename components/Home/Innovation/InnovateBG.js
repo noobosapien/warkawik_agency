@@ -132,8 +132,6 @@ export default function InnovateBG() {
       mountColor[2] = 178 / 256;
     }
 
-    console.log(mountColor);
-
     canvas = canvasRef.current;
     if (!canvas) return;
 

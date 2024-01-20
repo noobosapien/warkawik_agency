@@ -20,7 +20,7 @@ export default function Layout({ active, children }) {
     <>
       <div className={`${state?.darkMode?.dark ? "dark" : ""} scroll-smooth`}>
         <motion.div
-          className="bg-slate-200 dark:bg-slate-900"
+          className="bg-slate-200 dark:bg-slate-800"
           style={{
             position: "fixed",
             width: "100vw",
@@ -43,7 +43,7 @@ export default function Layout({ active, children }) {
               <div className="flex items-center space-x-20">
                 <Link href="/">
                   <h1>
-                    <span className="font-light text-slate-600 dark:text-slate-200 text-3xl lg:text-5xl">
+                    <span className="font-bold text-slate-600 dark:text-slate-200 text-3xl lg:text-5xl">
                       Warka
                     </span>{" "}
                     <span className="font-thin text-slate-600 dark:text-slate-200 text-3xl lg:text-5xl">
@@ -57,7 +57,7 @@ export default function Layout({ active, children }) {
                 <div className="hidden lg:flex space-x-8 font-bold items-center">
                   <Link
                     href="/services"
-                    className={`text-slate-600 dark:text-slate-200 hover:text-cyan-600 rounded ${
+                    className={`text-slate-600 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-600 rounded ${
                       active == "services" ? "border-cyan-600 border-b-4" : ""
                     }`}
                   >
@@ -66,7 +66,7 @@ export default function Layout({ active, children }) {
 
                   <Link
                     href="/process"
-                    className={`text-slate-600 dark:text-slate-200 hover:text-cyan-600 rounded ${
+                    className={`text-slate-600 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-600 rounded ${
                       active == "process" ? "border-cyan-600 border-b-4" : ""
                     }`}
                   >
@@ -75,7 +75,7 @@ export default function Layout({ active, children }) {
 
                   <Link
                     href="/portfolio"
-                    className={`text-slate-600 dark:text-slate-200 hover:text-cyan-600 rounded ${
+                    className={`text-slate-600 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-600 rounded ${
                       active == "portfolio" ? "border-cyan-600 border-b-4" : ""
                     }`}
                   >
@@ -83,8 +83,17 @@ export default function Layout({ active, children }) {
                   </Link>
 
                   <Link
+                    href="/technology"
+                    className={`text-slate-600 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-600 rounded ${
+                      active == "technology" ? "border-cyan-600 border-b-4" : ""
+                    }`}
+                  >
+                    Technology
+                  </Link>
+
+                  <Link
                     href="/blog"
-                    className={`text-slate-600 dark:text-slate-200 hover:text-cyan-600 rounded ${
+                    className={`text-slate-600 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-600 rounded ${
                       active == "blog" ? "border-cyan-600 border-b-4" : ""
                     }`}
                   >
@@ -92,21 +101,14 @@ export default function Layout({ active, children }) {
                   </Link>
 
                   <Link
-                    href="/about"
-                    className={`text-slate-600 dark:text-slate-200 hover:text-cyan-600 rounded ${
-                      active == "about" ? "border-cyan-600 border-b-4" : ""
-                    }`}
-                  >
-                    About us
-                  </Link>
-
-                  <Link
                     href="/contact"
-                    className={`text-slate-600 dark:text-slate-200 hover:text-cyan-600 rounded ${
-                      active == "contact" ? "border-cyan-600 border-b-4" : ""
+                    className={`p-4 text-slate-100 hover:text-slate-300 rounded-full ${
+                      active == "contact"
+                        ? "bg-slate-600 hover:bg-slate-800"
+                        : "bg-cyan-600 hover:bg-cyan-900"
                     }`}
                   >
-                    Contact
+                    Request a call
                   </Link>
 
                   <ToggleDark />
@@ -158,6 +160,14 @@ export default function Layout({ active, children }) {
                   Portfolio
                 </Link>
                 <Link
+                  href="/technology"
+                  className={`w-full text-center ${
+                    active == "technology" ? "text-slate-600" : ""
+                  }`}
+                >
+                  Technology
+                </Link>
+                <Link
                   href="/blog"
                   className={`w-full text-center ${
                     active == "blog" ? "text-slate-600" : ""
@@ -165,21 +175,14 @@ export default function Layout({ active, children }) {
                 >
                   Blog
                 </Link>
-                <Link
-                  href="/about"
-                  className={`w-full pt-6 border-t border-slate-400 text-center ${
-                    active == "about" ? "text-slate-600" : ""
-                  }`}
-                >
-                  About us
-                </Link>
+
                 <Link
                   href="/contact"
-                  className={`w-full py-3 rounded-full bg-cyan text-center ${
+                  className={`w-full py-3 pt-6 border-t border-slate-400 bg-cyan text-center ${
                     active == "contact" ? "text-slate-600" : ""
                   }`}
                 >
-                  Contact
+                  Request a call
                 </Link>
                 <ToggleDark />
               </div>
@@ -201,7 +204,7 @@ export default function Layout({ active, children }) {
                 <div className="flex flex-col items-center justify-evenly space-y-10">
                   <div className="flex flex-col space-y-6">
                     <p className="text-center text-slate-400">
-                      Let's keep in touch
+                      Download your free PDF on how to ...
                     </p>
 
                     <div className="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-6">
@@ -211,7 +214,7 @@ export default function Layout({ active, children }) {
                       />
 
                       <div className="max-w-xs mx-auto text-center py-2 px-6 rounded-2xl border-2 border-cyan-600/50">
-                        Join
+                        Download
                       </div>
                     </div>
                   </div>
@@ -277,6 +280,16 @@ export default function Layout({ active, children }) {
                   }`}
                 >
                   Portfolio
+                </Link>
+                <Link
+                  href="/technology"
+                  className={`${
+                    active == "technology"
+                      ? "text-slate-900 dark:text-slate-100"
+                      : ""
+                  }`}
+                >
+                  Technology
                 </Link>
                 <Link
                   href="/blog"

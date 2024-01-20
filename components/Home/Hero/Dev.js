@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
-import * as animationData from "@/public/dev.json";
+import * as animationData from "@/public/rocket.json";
 
 export default class Dev extends React.Component {
   constructor(props) {

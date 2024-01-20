@@ -25,15 +25,21 @@ const cards = [
 export default function Difference() {
   return (
     <>
-      <div id="difference" className="dark:bg-slate-700 bg-slate-200"></div>
+      <div
+        id="difference"
+        className="dark:bg-slate-700 bg-slate-200 mt-24 lg:mt-0"
+      ></div>
       <section className="dark:bg-slate-700 bg-slate-200 min-h-48 p-6">
         <div className="container flex flex-col mx-auto  lg:pt-32 justify-center items-center">
           <div className="flex flex-col lg:w-1/2 space-y-4 items-center">
-            <h1 className="text-4xl font-bold text-center">We excel in</h1>
+            <h1 className="text-4xl font-bold text-center">
+              Would you like your business to perform better?
+            </h1>
 
             <p className="mx-auto text-center text-slate-400">
-              We strive for your digital presence. We are savants in these but
-              not limited to.
+              If you already have a website, and a system in place to manage
+              inventory and customers but it does not generate leads as much as
+              you want.
             </p>
           </div>
 
